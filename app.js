@@ -1,4 +1,7 @@
-// Move to main
+//Remove Splash screen
+document.querySelector('#splash').className = "fade-out";
+
+  // Move to main
 document.querySelector('#go-dialer').addEventListener('click', function (ev) {
   //console.log(ev.target)
   document.querySelector('#dialer').classList.add('move-to-main');
