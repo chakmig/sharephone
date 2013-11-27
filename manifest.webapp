@@ -1,0 +1,10 @@
+{
+  "name": "Sharephone",
+  "description": "Share phone concept",
+  "launch_path": "/index.html",
+  "version": "1.0",
+  "developer": {
+    "name": "The Sharephone corp."
+  },
+  "default_locale": "en"
+}
