@@ -1,18 +1,20 @@
-//Remove Splash screen
-document.querySelector('#splash').className = "fade-out";
+// Remove Splash screen
+document.querySelector("#splash").className = "fade-out";
 
-  // Move to main
-document.querySelector('#go-dialer').addEventListener('click', function (ev) {
-  //console.log(ev.target)
-  document.querySelector('#dialer').classList.add('move-to-main');
-});
-document.querySelector('#dialer .back').addEventListener('click', function (ev) {
-  console.log(ev.target)
-  document.querySelector('#dialer').classList.remove('move-to-main');
-});
+// Home navigation
+var homeNav = document.querySelectorAll("#home ul button");
+for (var i = 0; i < homeNav.length; i++) {
+  homeNav[i].addEventListener("click", function(ev) {
+    document.querySelector('#'+this.innerHTML).classList.add('move-to-main');
+    document.querySelector('#home').classList.add('move-to-left');
+  });
+}
 
-
-
-//document.querySelector('#action-menu').addEventListener ('click', function () 
-//  document.querySelector('#action-menu').classList.add('move-to-right');
-//});
+// Section navigation
+var sectionNav = document.querySelectorAll("button[data-nav='home']");
+for (var i = 0; i < sectionNav.length; i++) {
+  sectionNav[i].addEventListener("click", function(ev) {
+    this.parentNode.classList.remove('move-to-main');
+    document.querySelector('#home').classList.remove('move-to-left');
+  });
+}

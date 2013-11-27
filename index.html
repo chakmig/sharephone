@@ -10,43 +10,51 @@
     <script defer src="app.js"></script>
   </head>
   <body>
-    <section id="splash">
+    <section id="splash" class="hidden">
       <img src="images/SF_splash.jpg">
     </section>
-    <section id="home">
+    
+    <nav id="home" class="main">
       <img src="images/SF_home.jpg">
       <ul>
-        <li><a id="go-dialer" href="#"></a></li>
-        <li><a href="#agenda"></a></li>
-        <li><a href="#camera"></a></li>
-        <li><a href="#fotos"></a></li>
-        <li><a href="#whatsapp"></a></li>
-        <li><a href="#help"></a></li>
+        <li><button>dialer</button></li>
+        <li><button>agenda</button></li>
+        <li><button>camera</button></li>
+        <li><button>fotos</button></li>
+        <li><button>whatsapp</button></li>
+        <li><button>help</button></li>
+        <li><button>hola</button></li>
       </ul>
-    </section>
-    <section id="dialer" class="app">
+    </nav>
+    
+    <section id="dialer">
       <img src="images/SF_dialer.jpg">
-      <a class="button back" href="#home"></a>
+      <button class="back" data-nav="home"></button>
     </section>
-    <section id="agenda" class="app">
+    
+    <section id="agenda">
       <img src="images/agenda.jpg">
-      <a class="button back" href="#home"></a>
+      <button class="back" data-nav="home"></button>
     </section>
-    <section id="camera" class="app">
+    
+    <section id="camera">
       <img src="images/SF_camera.jpg">
-      <a class="button back" href="#home"></a>
+      <button class="back" data-nav="home"></button>
     </section>
-    <section id="fotos" class="app">
+    
+    <section id="fotos">
       <img src="images/SF_fotos_1.jpg">
-      <a class="button full" href="#camera"></a>
+      <button class="full" data-nav="home"></button>
     </section>
-    <section id="whatsapp" class="app">
+    
+    <section id="whatsapp">
       <img src="images/SF_whatsapp.jpg">
-      <a class="button full" href="#home"></a>
+      <button class="full" data-nav="home"></button>
     </section>
-    <section id="help" class="app">
+    
+    <section id="help">
       <img src="images/SF_help.jpg">
-      <a class="button back" href="#home"></a>
+      <button class="back" data-nav="home"></button>
     </section>
   </body>
 </html>
