@@ -16,8 +16,8 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 
 input:focus, textarea:focus, isindex:focus, keygen:focus, select:focus { outline: none; }
-strong { font-weight:600; }
-a, button { cursor: pointer; }
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+a, button { cursor: pointer; outline:none; }
 hr { border: none; margin: 25px 0; }
 .hidden { display: none; }
 .float { float: left; }
@@ -33,7 +33,10 @@ html {
   background: #000;
 }
 
-body {
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -92,24 +95,35 @@ body {
   background: none;
   font-size: 0;
   border-radius: 50%;
+  padding: 0;
 }
 
 #home > img,
-section > img {
+section > img,
+section > ul > li > img {
   width: 100%;
 }
 
 /* Sections */
-body > section {
+section {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transition: 0.3s transform ease;
   -webkit-transition: 0.3s -webkit-transform ease;
+  overflow: scroll;
+}
+
+section ul {
+}
+
+section li {
+  float: left;
 }
 
 /* buttons */
@@ -118,6 +132,8 @@ button[data-nav] {
   border: 0;
   background: none;
   font-size: 0;
+  z-index: 10;
+  padding: 0;
 }
 
 button[data-nav].back {
@@ -144,4 +160,5 @@ button[data-nav].full {
 .move-to-main {
   transform: translateX(0);
   -webkit-transform: translateX(0);
+  z-index: 1;
 }

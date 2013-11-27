@@ -18,3 +18,13 @@ for (var i = 0; i < sectionNav.length; i++) {
     document.querySelector('#home').classList.remove('move-to-left');
   });
 }
+
+// Increase section size
+var sectionSize = document.querySelectorAll("[data-pages]");
+var imgSize = document.querySelectorAll("[data-pages] li");
+for (var i = 0; i < sectionSize.length; i++) {
+  sectionSize[i].querySelector("ul").style.width = sectionSize[i].dataset.pages + "00%";
+  for (var j = 0; j < imgSize.length; j++) {
+    imgSize[j].style.width = (100 / imgSize.length) + "%";
+  }
+}
