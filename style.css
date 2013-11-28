@@ -16,8 +16,7 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 
 input:focus, textarea:focus, isindex:focus, keygen:focus, select:focus { outline: none; }
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-a, button { cursor: pointer; outline:none; }
+a, button { cursor: pointer; outline:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 hr { border: none; margin: 25px 0; }
 .hidden { display: none; }
 .float { float: left; }
@@ -27,6 +26,9 @@ hr { border: none; margin: 25px 0; }
 .align-r { text-align: right; }
 .full-h { height: 100%; }
 .full-w { width: 100%; }
+[data-scroll="horizontal"] { overflow-x: scroll; }
+[data-scroll="verticall"] { overflow-y: scroll; }
+[data-scroll="all"] { overflow: scroll; }
 
 /* Custom styles */
 html {
@@ -116,10 +118,6 @@ section {
   -webkit-transform: translateX(100%);
   transition: 0.3s transform ease;
   -webkit-transition: 0.3s -webkit-transform ease;
-  overflow: scroll;
-}
-
-section ul {
 }
 
 section li {
