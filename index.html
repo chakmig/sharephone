@@ -16,6 +16,7 @@
       
       <nav id="home" class="main">
         <img src="images/SF_home.jpg">
+        <button id="weather-button" data-nav="weather"></button>
         <ul>
           <li><button>dialer</button></li>
           <li><button>agenda</button></li>
@@ -23,41 +24,53 @@
           <li><button>fotos</button></li>
           <li><button>whatsapp</button></li>
           <li><button>help</button></li>
-          <li><button>hola</button></li>
         </ul>
       </nav>
       
       <section id="dialer">
-        <img src="images/SF_dialer.jpg">
+        <header><img src="images/SF_topbar.jpg"></header>
         <button class="back" data-nav="home"></button>
+        <img src="images/SF_dialer.jpg">
       </section>
       
-      <section id="agenda">
-        <img src="images/agenda.jpg">
+      <section id="agenda" data-scroll="vertical">
+        <header><img src="images/SF_topbar_agenda.jpg"></header>
         <button class="back" data-nav="home"></button>
+        <img src="images/agenda.jpg">
       </section>
       
       <section id="camera">
-        <img src="images/SF_camera.jpg">
+        <header><img src="images/SF_topbar.jpg"></header>
         <button class="back" data-nav="home"></button>
+        <img src="images/SF_camera.jpg">
       </section>
       
-      <section id="fotos" data-pages="2" data-scroll="horizontal">
+      <section id="fotos" data-pages="3" data-scroll="horizontal">
+        <header><img src="images/SF_topbar.jpg"></header>
+        <button class="back" data-nav="home"></button>
         <ul>
           <li><img src="images/SF_fotos_1.jpg"></li>
           <li><img src="images/SF_fotos_2.jpg"></li>
+          <li><img src="images/SF_fotos_2.jpg"></li>
         </ul>
-        <button class="back" data-nav="home"></button>
       </section>
       
       <section id="whatsapp">
+        <header><img src="images/SF_topbar.jpg"></header>
+        <button class="back" data-nav="home"></button>
         <img src="images/SF_whatsapp.jpg">
-        <button class="full" data-nav="home"></button>
       </section>
       
       <section id="help">
-        <img src="images/SF_help.jpg">
+        <header><img src="images/SF_topbar.jpg"></header>
         <button class="back" data-nav="home"></button>
+        <img src="images/SF_help.jpg">
+      </section>
+      
+      <section id="weather">
+        <header><img src="images/SF_topbar.jpg"></header>
+        <button class="back" data-nav="home"></button>
+        <img src="images/SF_weather.jpg">
       </section>
     </div>
   </body>

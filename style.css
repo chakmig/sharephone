@@ -26,8 +26,8 @@ hr { border: none; margin: 25px 0; }
 .align-r { text-align: right; }
 .full-h { height: 100%; }
 .full-w { width: 100%; }
-[data-scroll="horizontal"] { overflow-x: scroll; }
-[data-scroll="verticall"] { overflow-y: scroll; }
+[data-scroll="horizontal"] { overflow-x: scroll; overflow-y: hidden; }
+[data-scroll="verticall"] { overflow-y: scroll; overflow-x: hidden; }
 [data-scroll="all"] { overflow: scroll; }
 
 /* Custom styles */
@@ -120,15 +120,26 @@ section {
   -webkit-transition: 0.3s -webkit-transform ease;
 }
 
+section header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+
 section li {
   float: left;
 }
 
 /* buttons */
-button[data-nav] {
+button {
   position: absolute;
   border: 0;
   background: none;
+}
+
+button[data-nav] {
   font-size: 0;
   z-index: 10;
   padding: 0;
@@ -148,6 +159,12 @@ button[data-nav].full {
   height: 100%;
 }
 
+#weather-button {
+  top: 3%;
+  left: 60%;
+  width: 30%;
+  height: 12%;
+}
 
 /* Transitions */
 .move-to-left {
