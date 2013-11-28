@@ -5,17 +5,22 @@ document.querySelector("#splash").className = "fade-out";
 var homeNav = document.querySelectorAll("#home ul button");
 for (var i = 0; i < homeNav.length; i++) {
   homeNav[i].addEventListener("click", function(ev) {
-    document.querySelector('#'+this.innerHTML).classList.add('move-to-main');
+    document.querySelector('#' + this.innerHTML).classList.add('move-to-main');
     document.querySelector('#home').classList.add('move-to-left');
   });
 }
 
 // Section navigation
-var sectionNav = document.querySelectorAll("button[data-nav='home']");
+var sectionNav = document.querySelectorAll("[data-nav]");
 for (var i = 0; i < sectionNav.length; i++) {
   sectionNav[i].addEventListener("click", function(ev) {
-    this.parentNode.classList.remove('move-to-main');
-    document.querySelector('#home').classList.remove('move-to-left');
+    if (this.dataset.nav === "home") {
+      this.parentNode.classList.remove('move-to-main');
+      document.querySelector("#home").classList.remove('move-to-left');
+    } else {
+      document.querySelector('#home').classList.add('move-to-left');
+      document.querySelector('#' + this.dataset.nav).classList.add('move-to-main');     
+    }
   });
 }
 
