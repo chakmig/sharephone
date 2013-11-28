@@ -175,6 +175,13 @@ button[data-nav].full {
   height: 12%;
 }
 
+#agenda-button {
+  bottom: 0;
+  right: 0;
+  width: 33%;
+  height: 16%;
+}
+
 /* Transitions */
 .move-to-left {
   transform: translateX(-100%);

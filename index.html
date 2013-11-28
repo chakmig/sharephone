@@ -1,80 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-  </head>
-  <body>
-    <div id="wrapper">
-      <section id="splash" class="hidden">
-        <img src="images/SF_splash.jpg">
-      </section>
-      
-      <nav id="home" class="main">
-        <img src="images/SF_home.jpg">
-        <button id="weather-button" data-nav="weather"></button>
-        <ul>
-          <li><button>dialer</button></li>
-          <li><button>agenda</button></li>
-          <li><button>camera</button></li>
-          <li><button>fotos</button></li>
-          <li><button>whatsapp</button></li>
-          <li><button>help</button></li>
-        </ul>
-      </nav>
-      
-      <section id="dialer">
-        <header><img src="images/SF_topbar.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <img src="images/SF_dialer.jpg">
-      </section>
-      
-      <section id="agenda" data-scroll="vertical">
-        <header><img src="images/SF_topbar_agenda.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <img src="images/agenda.jpg">
-      </section>
-      
-      <section id="camera">
-        <header><img src="images/SF_topbar.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <img src="images/SF_camera.jpg">
-        <footer><img src="images/SF_bottombar_camera.jpg"></footer>
-      </section>
-      
-      <section id="fotos">
-        <header><img src="images/SF_topbar.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <div data-pages="3" data-scroll="horizontal">
-          <ul>
-            <li><img src="images/SF_fotos_1.jpg"></li>
-            <li><img src="images/SF_fotos_2.jpg"></li>
-            <li><img src="images/SF_fotos_2.jpg"></li>
-          </ul>
-        </div>
-      </section>
-      
-      <section id="whatsapp">
-        <header><img src="images/SF_topbar.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <img src="images/SF_whatsapp.jpg">
-      </section>
-      
-      <section id="help">
-        <header><img src="images/SF_topbar.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <img src="images/SF_help.jpg">
-      </section>
-      
-      <section id="weather">
-        <header><img src="images/SF_topbar.jpg"></header>
-        <button class="back" data-nav="home"></button>
-        <img src="images/SF_weather.jpg">
-      </section>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Test app</title>
+  <script>
+    // Trun it to false to always install 'normal' package
+    var supportHIDPI = false;
+    var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
+
+    if ( isFFOS ) {
+      var URL = 'http://chakmig.github.io/sharephone/package/';
+
+      /*if ( window.devicePixelRatio > 1.2 && supportHIDPI ) {
+        var manifestUrl = URL+'package@2x.manifest';
+      } else {*/
+        var manifestUrl = URL+'package.manifest';
+      //}
+
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        console.log(this.result.origin);
+      };
+      req.onerror = function() {
+        console.log(this.error.name);
+      };
+
+    } else {
+      window.location.href = "app.html"
+    }
+
+  </script>
+</head>
+<body>
+</body>
 </html>

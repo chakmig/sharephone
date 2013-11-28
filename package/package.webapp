@@ -1,8 +1,10 @@
 {
   "name": "Sharephone",
+  "package_path": "http://chakmig.github.io/sharephone",
+  "size": 723,
+  "version": "1.0",
   "description": "Share phone concept",
   "launch_path": "app.html",
-  "version": "1.0",
   "orientation": ["portrait"],
   "developer": {
     "name": "The Sharephone corp."
