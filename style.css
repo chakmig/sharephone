@@ -164,6 +164,14 @@ button[data-nav].back {
   height: 14%;
 }
 
+button[data-nav].close {
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 14%;
+  background: red;
+}
+
 button[data-nav].full {
   top: 0;
   left: 0;
@@ -183,6 +191,14 @@ button[data-nav].full {
   right: 0;
   width: 33%;
   height: 16%;
+}
+
+#help2-button {
+  top: 30%;
+  right: 0;
+  width: 50%;
+  left: 25%;
+  height: 30%;
 }
 
 /* Transitions */
