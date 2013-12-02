@@ -116,7 +116,6 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 0;
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transition: 0.3s transform ease;
@@ -157,19 +156,12 @@ button[data-nav] {
   padding: 0;
 }
 
-button[data-nav].back {
-  top: 0;
-  left: 0;
-  width: 33%;
-  height: 14%;
-}
-
+button[data-nav].back,
 button[data-nav].close {
   top: 0;
   left: 0;
   width: 33%;
   height: 14%;
-  background: red;
 }
 
 button[data-nav].full {
@@ -201,6 +193,7 @@ button[data-nav].full {
   height: 30%;
 }
 
+
 /* Transitions */
 .move-to-left {
   transform: translateX(-100%);
@@ -210,5 +203,4 @@ button[data-nav].full {
 .move-to-main {
   transform: translateX(0);
   -webkit-transform: translateX(0);
-  z-index: 1;
 }
