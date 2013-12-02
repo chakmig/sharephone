@@ -1,7 +1,7 @@
 {
   "name": "Sharephone",
   "description": "Share phone concept",
-  "launch_path": "app.html",
+  "launch_path": "/app.html",
   "version": "1.0",
   "orientation": ["portrait"],
   "developer": {
