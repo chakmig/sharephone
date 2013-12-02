@@ -9,13 +9,7 @@
     var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
 
     if ( isFFOS ) {
-      var URL = 'http://chakmig.github.io/sharephone/package/';
-
-      /*if ( window.devicePixelRatio > 1.2 && supportHIDPI ) {
-        var manifestUrl = URL+'package@2x.manifest';
-      } else {*/
-        var manifestUrl = URL+'package.manifest';
-      //}
+      var manifestUrl = 'http://chakmig.github.io/sharephone/package/package.manifest';
 
       var req = navigator.mozApps.installPackage(manifestUrl);
       req.onsuccess = function() {
