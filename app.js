@@ -26,10 +26,10 @@ for (var i = 0; i < sectionNav.length; i++) {
 
 // Increase section size
 var pagesContainer = document.querySelectorAll("[data-pages]");
-var pages = document.querySelectorAll("[data-pages] li");
-for (var i = 0; i < pagesContainer.length; i++) {
+var pages = document.querySelectorAll("[data-pages] > ul > li");
+for (var i = 0; i < pagesContainer.length; i++) {  
   pagesContainer[i].querySelector("ul").style.width = pagesContainer[i].dataset.pages + "00%";
-  for (var j = 0; j < pages.length; j++) {
-    pages[j].style.width = (100 / pages.length) + "%";
+  for (var j = 0; j < pagesContainer.length; j++) {
+    pages[j].style.width = (100 / pagesContainer.length) + "%";
   }
 }

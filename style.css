@@ -29,6 +29,7 @@ hr { border: none; margin: 25px 0; }
 [data-scroll="horizontal"] { overflow-x: scroll; overflow-y: hidden; }
 [data-scroll="verticall"] { overflow-y: scroll; overflow-x: hidden; }
 [data-scroll="all"] { overflow: scroll; }
+.absolute { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 /* Custom styles */
 html {
@@ -60,14 +61,6 @@ html {
   -webkit-transition: 0.3s opacity ease 3s, z-index 3.3s;
 }
 
-#home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 .main {
   transform: translateX(0);
   -webkit-transform: translateX(0);
@@ -75,21 +68,31 @@ html {
   -webkit-transition: 0.3s -webkit-transform ease;
 }
 
-#home ul {
+#home ul.icons {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+#home ul.icons > li {
+  position: relative;
+}
+
+#home ul.icons ul {
   position: absolute;
   top: 15%;
   left: 0;
-  right: 0;
   bottom: 0;
+  width: 100%;
 }
 
-#home ul li {
+#home ul.icons ul li {
   float: left;
   width: 50%;
   height: 33%;
 }
 
-#home ul li button {
+#home ul.icons ul li button {
   height: 100%;
   width: 100%;
   display: block;
@@ -102,7 +105,7 @@ html {
 
 #home > img,
 section > img,
-section > ul > li > img {
+section ul li img {
   width: 100%;
 }
 
